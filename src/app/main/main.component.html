@@ -1,0 +1,120 @@
+<div class="main__heading">
+  <h1 class="main__heading-text">Операции в Райффайзенбанк </h1>
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="20" fill="#FFF200"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.8333H30V30H10V10.8333Z" fill="black"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5785 11.3873H29.4215V29.4456H10.5785V11.3873Z" fill="#FFF200"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5782 25.797L14.0363 28.1983L19.7954 22.5987L25.7472 28.3137L28.2412 25.9468L22.3492 20.3011L23.4819 19.2505V17.0106L24.1928 16.4334V18.1882L25.1086 18.904L27.8433 16.2832L28.7227 16.9297C29.241 15.094 26.2408 10.9259 23.759 13.235L20.8671 15.9828L21.4577 16.6641L19.9877 18.038L18.5662 16.6986L19.3131 16.0517L16.1445 13.1193C13.7592 11.2371 11.3133 14.101 11.2288 16.8948L12.0961 16.2023L14.7585 18.9505L15.7102 18.1886V16.5027L16.3004 16.9297V19.1351L17.4569 20.2434L11.5782 25.797Z" fill="black"/>
+  </svg>
+</div>
+<div class="main__authorization-text-container">
+  <p class="main__authorization-text">Авторизуйтесь в&nbsp;бизнес-аккаунте Райффайзенбанк с&nbsp;помощью логина и&nbsp;пароля, и&nbsp;мы&nbsp;сами загрузим выписку со&nbsp;счетами и&nbsp;операциями.</p>
+  <p class="main__authorization-text">Войти с помощью токена не получится</p>
+</div>
+<form  class="main__form">
+  <div class="tui-form__row tui-form__row_multi-fields main__form-inputs-container">
+    <div class="tui-form__multi-field">
+      <tui-input [formControl]="nameValue">
+      Логин от Райфайзенбанк
+        <input tuiTextfield />
+      </tui-input>
+      <tui-error
+        [formControl]="nameValue"
+      ></tui-error>
+    </div>
+    <div class="tui-form__multi-field">
+      <tui-input-password [formControl]="passwordValue">Пароль от Райфайзенбанк</tui-input-password>
+      <tui-error
+        [formControl]="passwordValue"
+      ></tui-error>
+    </div>
+  </div>
+  <div class="tui-form__buttons main__form-button-container">
+    <button
+      tuiButton
+      size="l"
+      appearance="custom"
+     class="main__form-button">
+      Войти
+    </button>
+    <p class="main__form-legal">Нажимая «Войти», вы соглашаетесь c
+      <a
+      tuiLink
+      href="#"
+      class="main__form-link"
+    >условиями передачи информации и договором оказания услуг
+    </a>
+    </p>
+
+  </div>
+</form>
+<div class="tui-form__buttons main__list-authorization-button-container">
+<button *ngIf="!accordion"
+        tuiButton
+        type="button"
+        appearance="flat"
+        size="s"
+        class="main__list-authorization-button"
+        (click)="accordion = true"
+>
+
+  Не могу авторизоваться</button>
+</div>
+<div class="min__list-container" [class.main__list_hide]="!accordion">
+  <h3 class="main__list-heading">Если не&nbsp;можете войти, загрузите выписку 1С&nbsp;самостоятельно</h3>
+  <p class="main__list-paragraph">Такие выписки тоже подходят, но&nbsp;банк по&nbsp;ним дольше принимает решение</p>
+  <ol class="tui-list tui-list_small main__list">
+    <li class="main__list-item">
+      <span class="main__list-number">1</span>
+      <div class="main__list-text-container">
+        <div class="tui-list__item-title main__list-tittle">Зайдите в личный кабинет банка</div>
+      </div>
+    </li>
+    <li class="main__list-item">
+      <span class="main__list-number">2</span>
+      <div class="main__list-text-container">
+        <div class="tui-list__item-title main__list-tittle">Найдите кнопку создания выписки</div>
+        <div class="tui-list__description main__list-description">
+          Она может называться «Выписка», «Скачать выписку» или «Экспорт выписки»
+        </div>
+      </div>
+    </li>
+    <li class="main__list-item">
+      <span class="main__list-number">3</span>
+      <div class="main__list-text-container">
+        <div class="tui-list__item-title main__list-tittle">Выберите период операций</div>
+        <div class="tui-list__description main__list-description">
+          Последние 2 года или с даты открытия счета, если открыли счет меньше 2 лет назад
+        </div>
+      </div>
+    </li>
+    <li class="main__list-item">
+      <span class="main__list-number">4</span>
+      <div class="main__list-text-container">
+        <div class="tui-list__item-title main__list-tittle">Скачайте выписку и загрузите в поле выше</div>
+        <div class="tui-list__description main__list-description">
+          Важно, чтобы выписка была получена не больше недели назад. <a
+          tuiLink
+          href="#"
+          class="main__list-link"
+        >
+          Посмотреть пример выписки
+        </a>
+        </div>
+      </div>
+    </li>
+  </ol>
+  <div class="main__file-input-container">
+  <tui-input-files
+    [formControl]="imageControl"
+    link="Выберите выписку"
+    label=" и подождите, пока она загрузится"
+    class="main__file-input"
+  ></tui-input-files>
+  <p class="main__file-input-description">Файлы 1С или txt не больше XX МБ</p>
+</div>
+</div>
+
+
+
+
