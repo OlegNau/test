@@ -1,221 +1,221 @@
-@import '~@taiga-ui/core/styles/taiga-ui-local';
+@import "~@taiga-ui/core/styles/taiga-ui-local";
 
-.main {
-  &__heading {
+.title-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.title {
+  @media @tablet-lg {
+    font: var(--tui-font-heading-6);
+    margin: 0 4px 0 0;
+  }
+
+  @media @desktop-s-min {
+    font: var(--tui-font-heading-3);
+    margin: 0 12px 0 0;
+  }
+}
+
+.title-img {
+  flex-shrink: 0;
+}
+
+.paragraph {
+  margin: 0;
+  font: var(--tui-font-text-m);
+}
+
+.form-description {
+  margin: 12px 0 0;
+}
+
+.form {
+  @media @tablet-lg {
+    padding: 16px 0 12px;
+  }
+
+  @media @desktop-s-min {
+    padding: 20px 0 32px;
+  }
+}
+.inputs-box {
+  @media @tablet-lg {
+    margin-bottom: 16px;
+  }
+
+  @media @desktop-s-min {
+    margin-bottom: 32px;
+  }
+}
+
+.form-button-box {
+  margin-top: 0px;
+
+  @media @tablet-lg-min {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+  }
+}
 
-    &-text {
+.form-button {
+  border-radius: 4px;
+  font: var(--tui-font-text-m);
+  background-color: var(--tui-warning-fill);
 
-      @media @tablet-lg {
-        font: var(--tui-font-heading-6);
-        margin: 0 4px 0 0;
-      }
-
-      @media @desktop-s-min {
-        font: var(--tui-font-heading-3);
-        margin: 0 12px 0 0;
-      }
-    }
-
-    & svg {
-      flex-shrink: 0;
-    }
+  @media @mobile-m {
+    padding: 10px;
   }
 
+  @media @tablet-lg-min {
+    padding: 16px;
+    margin-right: 20px;
+  }
+}
 
+.legal {
+  max-width: 400px;
 
-  &__authorization-text {
-    margin: 0;
-    font: var(--tui-font-text-m);
+  @media @tablet-lg {
+    margin-bottom: 0;
+  }
+}
 
-    &-container {
-      margin: 12px 0 0;
+.form-link {
+  & ::ng-deep .t-content {
+    display: inline;
+  }
+}
+
+.list {
+  &_hide {
+    @media @mobile-m {
+      display: none;
     }
   }
+}
 
-  &__form {
+.list-button {
+  @media @tablet-lg-min {
+    display: none;
+  }
 
+  &-box {
+    margin: 0 0 20px;
+  }
+}
+
+.list-title {
+  margin-bottom: 12px;
+
+  @media @tablet-lg {
+    font: var(--tui-font-heading-6);
+  }
+
+  @media @desktop-m-min {
+    font: var(--tui-font-heading-5);
+  }
+}
+
+.list-paragraph {
+  margin-top: 0;
+  font: var(--tui-font-text-m);
+}
+
+.item {
+  display: flex;
+
+  @media @desktop-s-min {
+    align-items: center;
+  }
+
+  & + & {
     @media @tablet-lg {
-      padding: 16px 0 12px;
+      margin-top: 16px;
     }
 
     @media @desktop-s-min {
-      padding: 20px 0 32px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.number {
+  display: inline-block;
+  height: min-content;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  vertical-align: baseline;
+  margin-right: 32px;
+  margin-left: 12px;
+
+  @media @tablet-lg {
+    font-weight: 700;
+  }
+
+  @media @desktop-s-min {
+    font-weight: 500;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background-color: var(--tui-base-02);
+    border-radius: 50%;
+  }
+}
+
+.item-tittle {
+  color: var(--tui-base-08);
+
+  @media @tablet-lg {
+    font: var(--tui-font-text-m);
+    font-weight: 700;
+  }
+
+  @media @desktop-s-min {
+    font: var(--tui-font-text-m);
+  }
+}
+
+.item-description {
+  font: var(--tui-font-text-m);
+  opacity: 0.8;
+}
+
+.item-link {
+  & ::ng-deep .t-content {
+    display: inline;
+  }
+}
+
+.file {
+  text-align: center;
+
+  &-box {
+    padding-left: 48px;
+
+    @media @tablet-lg {
+      margin-top: 16px;
     }
 
-    &-inputs-container {
-
-      @media @tablet-lg {
-        margin-bottom: 16px;
-      }
-
-      @media @desktop-s-min {
-        margin-bottom: 32px;
-      }
-    }
-
-    &-button-container {
-
-      margin-top: 0px;
-
-      @media @tablet-lg-min {
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    &-button {
-
-      border-radius: 4px;
-      font: var(--tui-font-text-m);
-      background-color: var(--tui-warning-fill);
-
-     @media @mobile-m {
-        padding: 10px;
-     }
-
-      @media @tablet-lg-min {
-        padding: 16px;
-        margin-right: 20px;
-      }
-    }
-
-    &-legal {
-      max-width: 400px;
-
-      @media @tablet-lg {
-        margin-bottom: 0;
-      }
-    }
-
-    &-link {
-
-      & ::ng-deep .t-content {
-        display: inline;
-      }
+    @media @desktop-s-min {
+      margin-top: 20px;
     }
   }
 
-  &__list {
-    &_hide {
-      @media @mobile-m {
-        display: none;
-      }
-    }
-
-    &-authorization-button {
-
-      @media @tablet-lg-min{
-        display: none;
-      }
-
-      &-container {
-        margin: 0 0 20px;
-      }
-    }
-
-    &-heading {
-      margin-bottom: 12px;
-
-      @media @tablet-lg {
-        font: var(--tui-font-heading-6)
-      }
-
-      @media @desktop-m-min {
-        font: var(--tui-font-heading-5);
-      }
-    }
-
-    &-paragraph {
-      margin-top: 0;
-      font: var(--tui-font-text-m);
-    }
-
-    &-item {
-      display: flex;
-
-      @media @tablet-lg {
-        margin-bottom: 16px;
-      }
-
-      @media @desktop-s-min {
-        align-items: center;
-        margin-bottom: 20px;
-      }
-    }
-
-    &-number {
-      display: inline-block;
-      height: min-content;
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      vertical-align: baseline;
-      margin-right: 32px;
-      margin-left: 12px;
-
-      @media @tablet-lg {
-        font-weight: 700;
-      }
-
-      @media @desktop-s-min {
-        font-weight: 500;
-      }
-
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        display: block;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 32px;
-        height: 32px;
-        background-color: var(--tui-base-02);
-        border-radius: 50%;
-      }
-    }
-
-    &-tittle {
-      color: var(--tui-base-08);
-
-      @media @tablet-lg {
-        font: var(--tui-font-text-m);
-        font-weight: 700;
-      }
-
-      @media @desktop-s-min {
-        font: var(--tui-font-text-m);
-      }
-    }
-
-    &-description {
-      font: var(--tui-font-text-m);
-      opacity: 0.8;
-    }
-
-    &-link {
-      & ::ng-deep .t-content {
-        display: inline;
-      }
-    }
-  }
-
-  &__file-input {
-    text-align: center;
-
-    &-container {
-      padding-left: 48px;
-    }
-
-    &-description {
-      margin-top: 4px;
-      font: var(--tui-font-text-s);
-      color: var(--tui-neutral-fill-night);
-    }
+  &-description {
+    margin-top: 4px;
+    font: var(--tui-font-text-s);
+    color: var(--tui-neutral-fill-night);
   }
 }

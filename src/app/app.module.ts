@@ -3,16 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {topPaginationModule} from "./topPagination/topPagination.module";
-import {TuiAlertModule, TuiDialogModule, TuiRootModule} from "@taiga-ui/core";
-import {pageIslandModule} from "./page-island/pageIsland.module";
-import {mainModule} from "./main/main.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { topPaginationModule } from './topPagination/topPagination.module';
+import { TuiAlertModule, TuiDialogModule, TuiRootModule } from '@taiga-ui/core';
+import { pageIslandModule } from './page-island/pageIsland.module';
+import { mainModule } from './main/main.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -25,6 +23,6 @@ import {mainModule} from "./main/main.module";
     TuiDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

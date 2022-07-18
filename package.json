@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint:format": "prettier --list-different \"*/.{ts,less,html,json}\"",
+    "lint:format": "prettier --list-different \"**/*.{ts,less,html,json}\" --write",
     "lint:format:fix": "npm run lint:format -- --write"
   },
   "private": true,
