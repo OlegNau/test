@@ -1,0 +1,35 @@
+<tui-root>
+  <!-- content of your app -->
+  <main>
+    <div class="tui-container tui-container_adaptive">
+      <top-pagination></top-pagination>
+      <div class="tui-row tui-row_adaptive">
+        <div class="tui-col_xs-12 tui-col_md-7 tui-col_lg-8">
+          <page-main></page-main>
+        </div>
+        <div class="tui-col_xs-12 tui-col_md-5 tui-col_lg-4">
+          <page-island></page-island>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--
+     If you need, you can add something between Taiga portal layers:
+    -->
+  <ng-container ngProjectAs="tuiOverContent">
+    <!-- Content over app content -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverDialogs">
+    <!-- Content over dialogs -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverAlerts">
+    <!-- Content over notifications -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverPortals">
+    <!-- Content over dropdowns -->
+  </ng-container>
+  <ng-container ngProjectAs="tuiOverHints">
+    <!-- Content over hints -->
+  </ng-container>
+</tui-root>
