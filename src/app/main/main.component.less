@@ -1,0 +1,227 @@
+@import "~@taiga-ui/core/styles/taiga-ui-local";
+
+:host {
+  display: block;
+}
+
+.title-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.title {
+  @media @tablet-lg {
+    font: var(--tui-font-heading-6);
+    margin-right: 4px;
+  }
+
+  @media @desktop-s-min {
+    font: var(--tui-font-heading-3);
+    margin-right: 12px;
+  }
+}
+
+.title-img {
+  flex-shrink: 0;
+}
+
+.paragraph {
+  font: var(--tui-font-text-m);
+}
+
+.form-description {
+  margin-top: 12px;
+}
+
+.form {
+  @media @tablet-lg {
+    padding: 16px 0 12px;
+  }
+
+  @media @desktop-s-min {
+    padding: 20px 0 32px;
+  }
+}
+.inputs-box {
+  @media @tablet-lg {
+    margin-bottom: 16px;
+  }
+
+  @media @desktop-s-min {
+    margin-bottom: 32px;
+  }
+}
+
+.form-button-box {
+
+  @media @tablet-lg-min {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form-button {
+  border-radius: var(--tui-radius-xs);
+  font: var(--tui-font-text-m);
+  background-color: var(--tui-warning-fill);
+
+  @media @mobile-m {
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  @media @tablet-lg-min {
+    padding: 16px;
+    margin-right: 20px;
+  }
+}
+
+.legal {
+  max-width: 400px;
+}
+
+/*TODO баг, автоматчиески перенос ссылки, будет поправлено при обновлениях тайги*/
+.form-link {
+  & ::ng-deep .t-content {
+    display: inline;
+  }
+}
+
+.list {
+  margin-top: 16px;
+
+  &_hide {
+    @media @mobile-m {
+      display: none;
+    }
+  }
+}
+
+.list-button {
+  @media @tablet-lg-min {
+    display: none;
+  }
+
+  &-box {
+    margin-top: 0;
+
+    @media @tablet-lg {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.list-title {
+  margin-bottom: 12px;
+
+  @media @tablet-lg {
+    font: var(--tui-font-heading-6);
+  }
+
+  @media @desktop-s-min {
+    font: var(--tui-font-heading-5);
+  }
+}
+
+.list-paragraph {
+  font: var(--tui-font-text-m);
+}
+
+.item {
+  display: flex;
+
+  @media @desktop-s-min {
+    align-items: center;
+  }
+
+  & + & {
+    @media @tablet-lg {
+      margin-top: 16px;
+    }
+
+    @media @desktop-s-min {
+      margin-top: 20px;
+    }
+  }
+}
+
+.number {
+  display: inline-block;
+  height: min-content;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  vertical-align: baseline;
+  margin-right: 32px;
+  margin-left: 12px;
+
+  @media @tablet-lg {
+    font-weight: 700;
+  }
+
+  @media @desktop-s-min {
+    font-weight: 500;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background-color: var(--tui-base-02);
+    border-radius: 50%;
+  }
+}
+
+.item-tittle {
+  color: var(--tui-base-08);
+
+  @media @tablet-lg {
+    font: var(--tui-font-text-m);
+    font-weight: 700;
+  }
+
+  @media @desktop-s-min {
+    font: var(--tui-font-text-m);
+  }
+}
+
+.item-description {
+  font: var(--tui-font-text-m);
+  opacity: 0.8;
+}
+
+.item-link {
+  & ::ng-deep .t-content {
+    display: inline;
+  }
+}
+
+.file {
+  text-align: center;
+
+  &-box {
+    padding-left: 48px;
+    margin-bottom: 20px;
+
+    @media @tablet-lg {
+      margin-top: 16px;
+    }
+
+    @media @desktop-s-min {
+      margin-top: 20px;
+    }
+  }
+
+  &-description {
+    margin-top: 4px;
+    font: var(--tui-font-text-s);
+    color: var(--tui-neutral-fill-night);
+  }
+}
